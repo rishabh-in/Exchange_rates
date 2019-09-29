@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/lib/normalize.css" />
+    <link rel="stylesheet" href="/static/lib/skeleton.css" />
+    <link rel="stylesheet" href="/static/lib/style.css" />
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+        <div class="container">
+            <ul class="navigation">
+                <li class="navigation-item">
+                    <a href="/">Home</a>
+                </li>
+                <li class="navigation-item">
+                    <a href="/exchangerate">Exchange Rates</a>
+                </li>
+            </ul>
+            </br>
+            </br>
+            </br>
+            <div style="clear:both">&nbsp;</div>
+            {% block content %}{% endblock %}
+        </div>
+
+
+
+</body>
+</html>

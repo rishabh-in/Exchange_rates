@@ -1,0 +1,55 @@
+{% extends "./layout/main.html" %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="four columns">
+                <form method="get">
+                    <label for="forname">Name of the 1st Currency</label>
+                    <input type="text" name="currency1" id="forname" value="{{currency1}}" />
+                    <label for="forage">Name of the 2nd Currency</label>
+                    <input type="text" name="currency2" id="forage" value="{{currency2}}"/>
+                    <label for="rate">Exchange Rate</label>
+                    <input type="text" name="exchangerate" id="rate" value="{{rate}}" />
+                    </br>
+                    <input type="submit" value="Enter" />
+                </form>
+            </div>
+            {% if rate!=1 %}
+                <div class="three columns">
+                    <table class="u-full-width ">
+                        <thead>
+                            <tr>
+                                <th>{{currency1}}</th>
+                                <th>{{currency2}}</th>
+                            </tr>
+                        </thead>
+                        {% for entry in table1 %}
+                        <tr>
+                            <td>{{entry[0]}}</td>
+                            <td>{{entry[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                <div class="three columns">
+                    <table class="u-full-width ">
+                        <thead>
+                            <tr>
+                                <th>{{currency2}}</th>
+                                <th>{{currency1}}</th>
+                            </tr>
+                        </thead>
+                        {% for entry in table2 %}
+                        <tr>
+                            <td>{{entry[0]}}</td>
+                            <td>{{entry[1]}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            {% endif %}
+        </div>
+
+
+{% endblock %}
